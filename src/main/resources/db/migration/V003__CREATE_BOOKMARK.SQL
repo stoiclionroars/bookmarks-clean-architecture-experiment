@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS bookmark (
+   id UUID PRIMARY KEY,
+   name VARCHAR(50) UNIQUE NOT NULL,
+   description VARCHAR(255) NOT NULL
+);
