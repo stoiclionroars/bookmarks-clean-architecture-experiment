@@ -15,7 +15,9 @@ public class BookmarkMapper implements RowMapper<Bookmark>{
         return new Bookmark(
             result.getObject("id", UUID.class), 
             result.getString("name"),
-            result.getString("description"));
+            result.getString("description"),
+            result.getString("link")
+            );
     }
     
 }

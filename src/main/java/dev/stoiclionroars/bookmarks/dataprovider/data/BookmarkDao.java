@@ -25,7 +25,7 @@ public class BookmarkDao implements AddBookmark, GetAllBookmarks, UpdateBookmark
 
     @Override
     public void updateBookmark(Bookmark bookmark) {
-        String sql = " UPDATE bookmark set name = ?, description = ?, WHERE id = ?";
+        String sql = " UPDATE bookmark set name = ?, description = ?, link = ? WHERE id = ?";
         jdbcTemplate.update(sql, bookmark.getName(), bookmark.getDescription(), bookmark.getId());
     }
 
@@ -37,8 +37,13 @@ public class BookmarkDao implements AddBookmark, GetAllBookmarks, UpdateBookmark
 
     @Override
     public void add(Bookmark bookmark) {
-        String sql = " INSERT INTO bookmark(id, name, description) VALUES ( ?, ?, ?)";
-        jdbcTemplate.update(sql, bookmark.getId(), bookmark.getName(), bookmark.getDescription()  );
+        String sql = " INSERT INTO bookmark(id, name, description, link) VALUES ( ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, 
+            bookmark.getId(), 
+            bookmark.getName(), 
+            bookmark.getDescription(),
+            bookmark.getLink()
+        );
     }
     
 }

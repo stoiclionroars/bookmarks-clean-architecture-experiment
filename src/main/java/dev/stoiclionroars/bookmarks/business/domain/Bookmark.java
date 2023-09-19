@@ -9,12 +9,15 @@ public class Bookmark {
     private String name;
 
     private String description;
+
+    private String link;
     
 
-    public Bookmark(UUID id, String name, String description) {
+    public Bookmark(UUID id, String name, String description, String link) {
         this.id = id;
         this.name = name;
-        this.description = description; 
+        this.description = description;
+        this.link = link;
     }
     
 
@@ -28,5 +31,9 @@ public class Bookmark {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getLink() {
+        return link;
     }
 }
