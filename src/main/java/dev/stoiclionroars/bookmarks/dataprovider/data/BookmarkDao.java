@@ -26,7 +26,7 @@ public class BookmarkDao implements AddBookmark, GetAllBookmarks, UpdateBookmark
     @Override
     public void updateBookmark(Bookmark bookmark) {
         String sql = " UPDATE bookmark set name = ?, description = ?, link = ? WHERE id = ?";
-        jdbcTemplate.update(sql, bookmark.getName(), bookmark.getDescription(), bookmark.getId());
+        jdbcTemplate.update(sql, bookmark.getName(), bookmark.getDescription(), bookmark.getLink(), bookmark.getId());
     }
 
     @Override
