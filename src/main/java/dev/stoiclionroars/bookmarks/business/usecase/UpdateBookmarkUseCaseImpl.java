@@ -12,7 +12,7 @@ public class UpdateBookmarkUseCaseImpl implements UpdateBookmarkUseCase {
     }
 
     @Override
-    public void updateBookmark(Bookmark bookmark) {
+    public void update(Bookmark bookmark) {
         data.update(bookmark);
     }
     

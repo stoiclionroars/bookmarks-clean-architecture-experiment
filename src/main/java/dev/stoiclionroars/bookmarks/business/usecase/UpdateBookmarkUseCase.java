@@ -4,6 +4,6 @@ import dev.stoiclionroars.bookmarks.business.domain.Bookmark;
 
 public interface UpdateBookmarkUseCase {
 
-    void updateBookmark(Bookmark bookmark);
+    void update(Bookmark bookmark);
     
 }

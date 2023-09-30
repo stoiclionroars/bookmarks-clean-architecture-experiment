@@ -7,6 +7,5 @@ import dev.stoiclionroars.bookmarks.business.domain.Bookmark;
 public interface GetAllBookmarksUseCase {
 
     List<Bookmark> getAllBookmarks();
-    
-    
+
 }

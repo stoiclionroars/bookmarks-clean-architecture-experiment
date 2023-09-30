@@ -55,7 +55,7 @@ public class BookmarkController {
 
     @PutMapping
     public ResponseEntity updateBookmark(@RequestBody Bookmark bookmark) {
-        updateBookmarkUseCase.updateBookmark(bookmark);
+        updateBookmarkUseCase.update(bookmark);
          return new ResponseEntity<String>("The Bookmark has been updated correctly.", HttpStatus.OK);
     }
 
