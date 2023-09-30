@@ -1,6 +1,5 @@
 package dev.stoiclionroars.bookmarks.business.domain;
 
-import java.lang.invoke.StringConcatFactory;
 import java.util.UUID;
 
 public class Workspace {
@@ -11,7 +10,7 @@ public class Workspace {
 
     private String description;
 
-    public Workspace(UUID id, String name, String description, String link) {
+    public Workspace(UUID id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
