@@ -12,22 +12,22 @@ import dev.stoiclionroars.bookmarks.dataprovider.data.BookmarkDao;
 @Configuration
 public class DaoConfiguration {
     
-    @Bean 
+    @Bean("AddBookmark")
     AddBookmark addBookmark() {
         return new BookmarkDao();
     }
 
-    @Bean
+    @Bean("GetAllBookmarks")
     GetAllBookmarks getAllBookmarks() {
         return new BookmarkDao();
     }
 
-    @Bean
+    @Bean("UpdateBookmark")
     UpdateBookmark updateBookmark() {
         return new BookmarkDao();
     }
 
-    @Bean
+    @Bean("DeleteBookmark")
     DeleteBookmark deleteBookmark() {
         return new BookmarkDao();
     }

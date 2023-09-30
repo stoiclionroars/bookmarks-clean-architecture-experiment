@@ -1,5 +1,6 @@
 package dev.stoiclionroars.bookmarks.configuration;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,22 +21,22 @@ import dev.stoiclionroars.bookmarks.business.usecase.DeleteBookmarkUseCaseImpl;
 public class UseCaseConfiguration {
 
     @Bean
-    AddBookmarkUseCase addBookmarkUseCase(AddBookmark data){
+    AddBookmarkUseCase addBookmarkUseCase(@Qualifier("AddBookmark") AddBookmark data){
         return new AddBookmarkUseCaseImpl(data);
     }
 
     @Bean
-    GetAllBookmarksUseCase getAllBookmarksUseCase(GetAllBookmarks data){
+    GetAllBookmarksUseCase getAllBookmarksUseCase(@Qualifier("GetAllBookmarks") GetAllBookmarks data){
         return new GetAllBookmarksUseCaseImpl(data);
     }
 
     @Bean
-    UpdateBookmarkUseCase updateBookmarkUseCase(UpdateBookmark data){
+    UpdateBookmarkUseCase updateBookmarkUseCase(@Qualifier("UpdateBookmark") UpdateBookmark data){
         return new UpdateBookmarkUseCaseImpl(data);
     }
 
     @Bean
-    DeleteBookmarkUseCase deleteBookmarkUseCase(DeleteBookmark data){
+    DeleteBookmarkUseCase deleteBookmarkUseCase(@Qualifier("DeleteBookmark") DeleteBookmark data){
         return new DeleteBookmarkUseCaseImpl(data);
     }
     
