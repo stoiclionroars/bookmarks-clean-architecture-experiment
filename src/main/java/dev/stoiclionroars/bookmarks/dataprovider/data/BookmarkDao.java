@@ -30,7 +30,7 @@ public class BookmarkDao implements AddBookmark, GetAllBookmarks, UpdateBookmark
     }
 
     @Override
-    public List<Bookmark> getAll() {
+    public List<Bookmark> getAllBookmarks() {
         String sql = "SELECT * FROM bookmark";
         return jdbcTemplate.query(sql, new BookmarkMapper());
     }
