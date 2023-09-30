@@ -5,11 +5,11 @@ import dev.stoiclionroars.bookmarks.business.domain.Workspace;
 
 import java.util.List;
 
-public class GetAllWorkspaceUseCaseImpl implements GetAllWorkspaceUseCase {
+public class GetAllWorkspacesUseCaseImpl implements GetAllWorkspacesUseCase {
 
     private GetAllWorkspaces data;
 
-    public GetAllWorkspaceUseCaseImpl(GetAllWorkspaces data) {
+    public GetAllWorkspacesUseCaseImpl(GetAllWorkspaces data) {
         this.data = data;
     }
 

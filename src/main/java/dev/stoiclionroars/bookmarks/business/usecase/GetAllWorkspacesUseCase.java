@@ -4,7 +4,7 @@ import dev.stoiclionroars.bookmarks.business.domain.Workspace;
 
 import java.util.List;
 
-public interface GetAllWorkspaceUseCase {
+public interface GetAllWorkspacesUseCase {
 
     List<Workspace> getAllWorkspace();
 
