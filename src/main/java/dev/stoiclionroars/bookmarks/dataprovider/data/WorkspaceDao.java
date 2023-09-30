@@ -41,7 +41,7 @@ public class WorkspaceDao implements AddWorkspace, GetAllWorkspaces, UpdateWorks
 
     @Override
     public void update(Workspace workspace) {
-        String sql = "UPDATE workspace SET name = ?, description + ? WHERE id = ?";
+        String sql = "UPDATE workspace SET name = ?, description = ? WHERE id = ?";
         jdbcTemplate.update(sql, workspace.getName(), workspace.getDescription(), workspace.getId());
     }
 }

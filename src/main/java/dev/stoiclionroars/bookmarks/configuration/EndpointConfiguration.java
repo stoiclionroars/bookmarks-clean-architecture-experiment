@@ -1,13 +1,11 @@
 package dev.stoiclionroars.bookmarks.configuration;
 
+import dev.stoiclionroars.bookmarks.business.usecase.*;
+import dev.stoiclionroars.bookmarks.entrypoint.controller.WorkspaceController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import dev.stoiclionroars.bookmarks.FakeController;
-import dev.stoiclionroars.bookmarks.business.usecase.AddBookmarkUseCase;
-import dev.stoiclionroars.bookmarks.business.usecase.UpdateBookmarkUseCase;
-import dev.stoiclionroars.bookmarks.business.usecase.DeleteBookmarkUseCase;
-import dev.stoiclionroars.bookmarks.business.usecase.GetAllBookmarksUseCase;
 import dev.stoiclionroars.bookmarks.entrypoint.controller.BookmarkController;
 
 @Configuration
@@ -25,6 +23,20 @@ public class EndpointConfiguration {
                 updateBookmarkUseCase,
                 deleteBookmarkUseCase
             );
+    }
+
+    @Bean
+    WorkspaceController workspaceController(
+            AddWorkspaceUseCase addWorkspaceUseCase,
+            GetAllWorkspacesUseCase getAllWorkspacesUseCase,
+            UpdateWorkspaceUseCase updateWorkspaceUseCase,
+            DeleteWorkspaceUseCase deleteWorkspaceUseCase) {
+        return new WorkspaceController(
+                addWorkspaceUseCase,
+                getAllWorkspacesUseCase,
+                updateWorkspaceUseCase,
+                deleteWorkspaceUseCase
+        );
     }
 
     @Bean
