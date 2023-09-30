@@ -6,7 +6,7 @@ import dev.stoiclionroars.bookmarks.business.domain.Bookmark;
 
 public interface GetAllBookmarks {
 
-    List<Bookmark> getAllBookmarks();
+    List<Bookmark> getAll();
     
     
 }

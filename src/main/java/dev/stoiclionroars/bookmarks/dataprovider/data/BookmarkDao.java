@@ -24,13 +24,13 @@ public class BookmarkDao implements AddBookmark, GetAllBookmarks, UpdateBookmark
     }
 
     @Override
-    public void updateBookmark(Bookmark bookmark) {
+    public void update(Bookmark bookmark) {
         String sql = " UPDATE bookmark set name = ?, description = ?, link = ? WHERE id = ?";
         jdbcTemplate.update(sql, bookmark.getName(), bookmark.getDescription(), bookmark.getLink(), bookmark.getId());
     }
 
     @Override
-    public List<Bookmark> getAllBookmarks() {
+    public List<Bookmark> getAll() {
         String sql = "SELECT * FROM bookmark";
         return jdbcTemplate.query(sql, new BookmarkMapper());
     }

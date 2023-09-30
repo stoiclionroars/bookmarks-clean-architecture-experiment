@@ -15,7 +15,7 @@ public class GetAllBookmarksUseCaseImpl implements GetAllBookmarksUseCase {
 
     @Override
     public List<Bookmark> getAllBookmarks() {
-        return data.getAllBookmarks();
+        return data.getAll();
     }
     
 }
