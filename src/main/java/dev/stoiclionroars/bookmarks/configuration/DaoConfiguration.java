@@ -1,6 +1,7 @@
 package dev.stoiclionroars.bookmarks.configuration;
 
 import dev.stoiclionroars.bookmarks.business.data.*;
+import dev.stoiclionroars.bookmarks.dataprovider.data.FolderDao;
 import dev.stoiclionroars.bookmarks.dataprovider.data.WorkspaceDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -48,6 +49,26 @@ public class DaoConfiguration {
     @Bean("DeleteWorkspace")
     DeleteWorkspace deleteWorkspace() {
         return new WorkspaceDao();
+    }
+
+    @Bean("AddFolder")
+    AddFolder AddFolder() {
+        return new FolderDao();
+    }
+
+    @Bean("GetAllFolders")
+    GetAllFolders getAllFolders() {
+        return new FolderDao();
+    }
+
+    @Bean("UpdateFolder")
+    UpdateFolder updateFolder() {
+        return new FolderDao();
+    }
+
+    @Bean("DeleteFolder")
+    DeleteFolder deleteFolder() {
+        return new FolderDao();
     }
 
 }

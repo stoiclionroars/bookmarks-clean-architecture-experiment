@@ -49,4 +49,24 @@ public class UseCaseConfiguration {
         return new DeleteWorkspaceUseCaseImpl(data);
     }
 
+    @Bean
+    AddFolderUseCase addFolderUseCase(@Qualifier("AddFolder") AddFolder data) {
+        return new AddFolderUseCaseImpl(data);
+    }
+
+    @Bean
+    GetAllFoldersUseCase getAllFoldersUseCase(@Qualifier("GetAllFolders") GetAllFolders data) {
+        return new GetAllFoldersUseCaseImpl(data);
+    }
+
+    @Bean
+    UpdateFolderUseCase updateFolderUseCase(@Qualifier("UpdateFolder") UpdateFolder data) {
+        return new UpdateFolderUseCaseImpl(data);
+    }
+
+    @Bean
+    DeleteFolderUseCase deleteFolderUseCase(@Qualifier("DeleteFolder") DeleteFolder data) {
+        return new DeleteFolderUseCaseImpl(data);
+    }
+
 }
