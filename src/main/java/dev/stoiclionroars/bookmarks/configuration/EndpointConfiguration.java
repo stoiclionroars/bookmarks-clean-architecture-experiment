@@ -1,6 +1,7 @@
 package dev.stoiclionroars.bookmarks.configuration;
 
 import dev.stoiclionroars.bookmarks.business.usecase.*;
+import dev.stoiclionroars.bookmarks.entrypoint.controller.FolderController;
 import dev.stoiclionroars.bookmarks.entrypoint.controller.WorkspaceController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,6 +37,20 @@ public class EndpointConfiguration {
                 getAllWorkspacesUseCase,
                 updateWorkspaceUseCase,
                 deleteWorkspaceUseCase
+        );
+    }
+
+    @Bean
+    FolderController folderController(
+            AddFolderUseCase addFolderUseCase,
+            GetAllFoldersUseCase getAllFoldersUseCase,
+            UpdateFolderUseCase updateFolderUseCase,
+            DeleteFolderUseCase deleteFolderUseCase) {
+        return new FolderController(
+                addFolderUseCase,
+                getAllFoldersUseCase,
+                updateFolderUseCase,
+                deleteFolderUseCase
         );
     }
 
